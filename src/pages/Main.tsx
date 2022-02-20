@@ -42,15 +42,15 @@ const Readme = styled.div`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 1.25rem;
-  color: #f0f0f0;
+  color: white;
   left: 0;
   bottom: 0;
   width: 200px;
   height: 40px;
   background-color: ${({ page }: { page: string }) =>
-    page === 'about' ? `#084594` : `#e5e5e5`};
+    page === 'about' ? `#9AD0EC` : `#eeeeee`};
   border: ${({ page }: { page: string }) =>
-    page === 'about' ? `5px solid #084594` : `5px solid #e5e5e5`};
+    page === 'about' ? `5px solid #9AD0EC` : `5px solid #eeeeee`};
   cursor: pointer;
 `;
 
@@ -62,16 +62,15 @@ const StackContainer = styled.div`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 1.25rem;
-  color: #f0f0f0;
+  color: white;
   left: 200px;
   bottom: 0;
   width: 200px;
   height: 40px;
   background-color: ${({ page }: { page: string }) =>
-    page === 'stack' ? `#084594` : `#e5e5e5`};
+    page === 'stack' ? `#9AD0EC` : `#eeeeee`};
   border: ${({ page }: { page: string }) =>
-    page === 'stack' ? `5px solid #084594` : `5px solid #e5e5e5`};
-  /* border: 5px solid #084594; */
+    page === 'stack' ? `5px solid #9AD0EC` : `5px solid #eeeeee`};
   cursor: pointer;
 `;
 
@@ -83,22 +82,22 @@ const ProjectContainer = styled.div`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 1.25rem;
-  color: #f0f0f0;
+  color: white;
   left: 400px;
   bottom: 0;
   width: 200px;
   height: 40px;
   background-color: ${({ page }: { page: string }) =>
-    page === 'project' ? `#084594` : `#e5e5e5`};
+    page === 'project' ? `#9AD0EC` : `#eeeeee`};
   border: ${({ page }: { page: string }) =>
-    page === 'project' ? `5px solid #084594` : `5px solid #e5e5e5`};
+    page === 'project' ? `5px solid #9AD0EC` : `5px solid #eeeeee`};
   cursor: pointer;
 `;
 
 const Disc = styled.div`
   width: 100%;
   height: 90%;
-  border: 5px solid #084594;
+  border: 5px solid #9ad0ec;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
