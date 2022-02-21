@@ -53,7 +53,6 @@ const Info = styled.div`
 
 const Cover = styled.div`
   display: flex;
-
   width: 90%;
 `;
 
@@ -97,6 +96,12 @@ const SubTitle = styled.div`
   border-bottom: 2px solid #e5e5e5;
 `;
 
+const BottomCover = styled.div`
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const SelfDesc = styled.div`
   width: 95%;
   height: 200px;
@@ -104,11 +109,46 @@ const SelfDesc = styled.div`
   border: 1px dashed red;
 `;
 
+const Career = styled.div`
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1572a1;
+  width: 49%;
+  height: 50px;
+  border-bottom: 2px solid #e5e5e5;
+`;
+
+const Language = styled.div`
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1572a1;
+  width: 49%;
+  height: 50px;
+  border-bottom: 2px solid #e5e5e5;
+`;
+
+const Left = styled.div`
+  width: 49%;
+  height: 100%;
+  border: 1px dashed red;
+`;
+
+const Right = styled.div`
+  width: 49%;
+  height: 100%;
+  border: 1px dashed red;
+`;
+
 const Something = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 95%;
   height: 200px;
   margin-top: 10px;
-  border: 1px dashed red;
 `;
 
 const About: React.FunctionComponent = () => {
@@ -147,7 +187,14 @@ const About: React.FunctionComponent = () => {
       <Desc>
         <SubTitle>About me</SubTitle>
         <SelfDesc></SelfDesc>
-        <Something></Something>
+        <BottomCover>
+          <Career>Career</Career>
+          <Language>Education</Language>
+        </BottomCover>
+        <Something>
+          <Left></Left>
+          <Right></Right>
+        </Something>
       </Desc>
     </Container>
   );

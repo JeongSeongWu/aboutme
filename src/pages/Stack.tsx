@@ -35,11 +35,12 @@ const Title = styled.div`
   font-weight: bold;
   width: 100%;
   margin-top: 10px;
+  margin-bottom: 10px;
   height: 50px;
 `;
 
 const ImgCover = styled.div`
-  border: 2px solid #1572a1;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: flex;
   width: 85%;
@@ -144,7 +145,9 @@ const Stack: React.FunctionComponent = () => {
             <Img src="./github.png" />
             <Box>
               <Name>Github</Name>
-              <Content></Content>
+              <Content>
+                Github을 통한 프로젝트 관리와 협업이 가능합니다.
+              </Content>
             </Box>
           </ImgCover>
           <ImgCover>
@@ -152,7 +155,7 @@ const Stack: React.FunctionComponent = () => {
             <Box>
               <Name>Git</Name>
               <Content>
-                부트캠프에서 진행한 프로젝트 모두 git을 활용한 협업을 통한
+                부트캠프에서 진행한 프로젝트 모두 git을 활용한 협업을 통해
                 버전관리를 진행하였습니다.
               </Content>
             </Box>
