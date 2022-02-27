@@ -82,68 +82,51 @@ const Img = styled.img`
 const Right = styled.section`
   display: flex;
   justify-content: flex-end;
+  justify-content: center;
   position: relative;
   width: 50%;
   height: 100%;
   border-left: 5px solid #9ad0ec;
 `;
 
-const RightSidebar = styled.ul`
+const RightCover = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-direction: column;
-  width: 20%;
-  height: 100%;
+  width: 100%;
+  height: 50px;
   background: #9ad0ec;
-  /* border: 1px solid red; */
-`;
-
-const SideButton = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-  color: white;
-  width: 80%;
-  height: 30px;
-  border-radius: 5px;
-  list-style: none;
-  cursor: pointer;
-  :hover {
-    background: #e5e5e5;
-  }
 `;
 
 const RightTitle = styled.div`
   width: 100%;
-  height: 80px;
+  height: 50px;
   display: flex;
   font-size: 1.25rem;
+  background: #9ad0ec;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   font-weight: bold;
   justify-content: center;
   align-items: center;
 `;
 
-const Triangle = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-top: 100px solid #9ad0ec;
-  border-right: 100px solid transparent;
+const CenterEmptyBox = styled.div`
+  width: 40%;
+  height: 50px;
+  background: white;
 `;
 
-const Triangle2 = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 100px solid #9ad0ec;
-  border-left: 100px solid transparent;
+const LeftEmptyBox = styled.div`
+  width: 30%;
+  height: 50px;
+  border-top-right-radius: 25px;
+  background: white;
+`;
+
+const RightEmptyBox = styled.div`
+  width: 30%;
+  height: 50px;
+  border-top-left-radius: 25px;
+  background: white;
 `;
 
 const Project: React.FunctionComponent = () => {
@@ -159,7 +142,16 @@ const Project: React.FunctionComponent = () => {
           <Circle3></Circle3>
         </WaveBase>
       </Left>
-      <Right></Right>
+      <Right>
+        <RightCover>
+          <LeftEmptyBox />
+          <CenterEmptyBox>
+            <RightTitle></RightTitle>
+          </CenterEmptyBox>
+
+          <RightEmptyBox />
+        </RightCover>
+      </Right>
     </Container>
   );
 };
