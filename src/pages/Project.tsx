@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import Intro from '../components/Intro';
 
 const Container = styled.div`
   display: flex;
@@ -80,9 +81,11 @@ const Img = styled.img`
 `;
 
 const Right = styled.section`
+  position: relative;
   display: flex;
-  justify-content: flex-end;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   width: 50%;
   height: 100%;
@@ -102,6 +105,7 @@ const RightTitle = styled.div`
   display: flex;
   font-size: 1.25rem;
   background: #9ad0ec;
+  color: white;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   font-weight: bold;
@@ -110,23 +114,84 @@ const RightTitle = styled.div`
 `;
 
 const CenterEmptyBox = styled.div`
-  width: 40%;
+  width: 30%;
   height: 50px;
   background: white;
 `;
 
 const LeftEmptyBox = styled.div`
-  width: 30%;
+  width: 35%;
   height: 50px;
   border-top-right-radius: 25px;
   background: white;
 `;
 
 const RightEmptyBox = styled.div`
-  width: 30%;
+  width: 35%;
   height: 50px;
   border-top-left-radius: 25px;
   background: white;
+`;
+
+const Content = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 70px;
+  flex-direction: column;
+  width: 95%;
+  height: 75%;
+  border: 1px solid blue;
+`;
+
+const BottomContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+`;
+
+const IntroTag = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  font-size: 1.1rem;
+  font-weight: 550;
+  color: #9ad0ec;
+  letter-spacing: 1px;
+  cursor: pointer;
+  :after {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00b4d8;
+    transition: all 0.5s;
+  }
+
+  :before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #00b4d8;
+    transition: all 0.5s;
+  }
+
+  :hover:after {
+    width: 50%;
+  }
+
+  :hover:before {
+    width: 50%;
+  }
 `;
 
 const Project: React.FunctionComponent = () => {
@@ -146,11 +211,19 @@ const Project: React.FunctionComponent = () => {
         <RightCover>
           <LeftEmptyBox />
           <CenterEmptyBox>
-            <RightTitle></RightTitle>
+            <RightTitle>서비스소개</RightTitle>
           </CenterEmptyBox>
-
           <RightEmptyBox />
         </RightCover>
+        <Content>
+          <Intro />
+        </Content>
+        <BottomContainer>
+          <IntroTag>서비스소개</IntroTag>
+          <IntroTag>사육정보</IntroTag>
+          <IntroTag>수조관리</IntroTag>
+          <IntroTag>정보공유</IntroTag>
+        </BottomContainer>
       </Right>
     </Container>
   );
