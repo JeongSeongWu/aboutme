@@ -1,5 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import Intro from '../components/Intro';
+import Info from '../components/Info';
+import Manage from '../components/Manage';
+import Posting from '../components/Posting';
+import { useState, useEffect } from 'react';
+import { faL, fas } from '@fortawesome/free-solid-svg-icons';
 
 const Container = styled.div`
   display: flex;
@@ -76,6 +81,51 @@ const Title = styled.div`
   z-index: 9;
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  height: 50px;
+  z-index: 99;
+`;
+
+const NotionLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 1px #e5e5e5;
+  width: 120px;
+  height: 100%;
+  text-decoration: none;
+
+  /* border: 1px solid red; */
+`;
+
+const ProjectLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #1572a1;
+  text-shadow: 1px 1px 1px #e5e5e5;
+  width: 120px;
+  height: 100%;
+  text-decoration: none;
+
+  /* border: 1px solid red; */
+`;
+
 const Img = styled.img`
   width: 55%;
 `;
@@ -129,6 +179,7 @@ const LeftEmptyBox = styled.div`
 const RightEmptyBox = styled.div`
   width: 35%;
   height: 50px;
+  border-top-right-radius: 5px;
   border-top-left-radius: 25px;
   background: white;
 `;
@@ -141,7 +192,7 @@ const Content = styled.div`
   flex-direction: column;
   width: 95%;
   height: 75%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 `;
 
 const BottomContainer = styled.div`
@@ -152,7 +203,7 @@ const BottomContainer = styled.div`
   height: 50px;
 `;
 
-const IntroTag = styled.div`
+const IntroTag = styled.button`
   position: relative;
   display: flex;
   justify-content: center;
@@ -162,6 +213,8 @@ const IntroTag = styled.div`
   font-weight: 550;
   color: #9ad0ec;
   letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
   cursor: pointer;
   :after {
     content: '';
@@ -195,12 +248,44 @@ const IntroTag = styled.div`
 `;
 
 const Project: React.FunctionComponent = () => {
+  const [page, setPage] = useState({
+    intro: false,
+    info: false,
+    manage: false,
+    post: false,
+  });
+  const init = {
+    intro: false,
+    info: false,
+    manage: false,
+    post: false,
+  };
+  const handlePage = (e: any) => {
+    setPage({
+      ...init,
+      [e.target.name]: true,
+    });
+  };
+
+  useEffect(() => {
+    setPage({
+      ...page,
+      intro: true,
+    });
+  }, []);
+
   return (
     <Container>
       <Left>
         <Title>
           <Img src="./underthesea.png" />
         </Title>
+        <LinkContainer>
+          <ProjectLink href="https://underthesea.ga/">underTheSea</ProjectLink>
+          <NotionLink href="https://codestates.notion.site/14-Code-Palette-UnderTheSea-1a0d69e3b1de40488745de4eef3752ef">
+            Notion
+          </NotionLink>
+        </LinkContainer>
         <WaveBase>
           <Circle></Circle>
           <Circle2></Circle2>
@@ -216,13 +301,24 @@ const Project: React.FunctionComponent = () => {
           <RightEmptyBox />
         </RightCover>
         <Content>
-          <Intro />
+          {page.intro && <Intro />}
+          {page.info && <Info />}
+          {page.manage && <Manage />}
+          {page.post && <Posting />}
         </Content>
         <BottomContainer>
-          <IntroTag>서비스소개</IntroTag>
-          <IntroTag>사육정보</IntroTag>
-          <IntroTag>수조관리</IntroTag>
-          <IntroTag>정보공유</IntroTag>
+          <IntroTag name="intro" onClick={handlePage}>
+            서비스소개
+          </IntroTag>
+          <IntroTag name="info" onClick={handlePage}>
+            사육정보
+          </IntroTag>
+          <IntroTag name="manage" onClick={handlePage}>
+            수조관리
+          </IntroTag>
+          <IntroTag name="post" onClick={handlePage}>
+            정보공유
+          </IntroTag>
         </BottomContainer>
       </Right>
     </Container>
