@@ -108,13 +108,13 @@ const Manage: React.FunctionComponent = () => {
       <Input type="radio" name="pos" id="pos4" />
       <Ul>
         <ImgContainer>
-          <Img src="./수조들.png" />
+          <Img src="./aquarium.png" />
         </ImgContainer>
         <ImgContainer>
-          <Img src="./달력.png" />
+          <Img src="./calendar.png" />
         </ImgContainer>
         <ImgContainer>
-          <Img src="./기록.png" />
+          <Img src="./record.png" />
         </ImgContainer>
 
         <Content>

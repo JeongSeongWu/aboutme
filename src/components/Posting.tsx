@@ -97,7 +97,7 @@ const Posting: React.FunctionComponent = () => {
       <Input type="radio" name="pos" id="pos2" />
       <Ul>
         <ImgContainer>
-          <Img src="./게시판.png" />
+          <Img src="./board.png" />
         </ImgContainer>
         <Content>
           <h2>정보공유</h2>
