@@ -6,6 +6,7 @@ import { useState } from 'react';
 import About from './About';
 import Stack from './Stack';
 import Project from './Project';
+import { NOMEM } from 'dns';
 
 const Container = styled.div`
   display: flex;
@@ -20,6 +21,31 @@ const Container = styled.div`
 const Title = styled.div`
   width: 100%;
   height: 10%;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Keyword = styled.div`
+  font-size: 2rem;
+  color: #1572a1;
+  font-weight: 600;
+`;
+
+const Name = styled.div`
+  font-size: 2rem;
+  font-weight: 600;
+`;
+
+const Sign = styled.div`
+  font-size: 2rem;
+  font-weight: 600;
+`;
+
+const TitleContent = styled.div`
+  font-size: 2rem;
+  font-weight: 600;
 `;
 
 const InnerContainer = styled.div`
@@ -115,9 +141,16 @@ const Main = () => {
     setPage('project');
   };
 
+  const you = '{you}';
+
   return (
     <Container>
-      <Title></Title>
+      <Title>
+        <Keyword>const</Keyword>
+        <Name>JeongSeongWu</Name>
+        <Sign>=</Sign>
+        <TitleContent>`I really wanna work with &{you}!`</TitleContent>
+      </Title>
       <InnerContainer>
         <NavBar>
           <Readme page={page} onClick={turnOnAbout}>

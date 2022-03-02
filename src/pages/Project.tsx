@@ -88,7 +88,7 @@ const LinkContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 45%;
+  top: 42%;
   width: 100%;
   height: 50px;
   z-index: 99;
@@ -106,8 +106,10 @@ const NotionLink = styled.a`
   width: 120px;
   height: 100%;
   text-decoration: none;
-
-  /* border: 1px solid red; */
+  transition: 0.5s;
+  :hover {
+    font-size: 1.6rem;
+  }
 `;
 
 const ProjectLink = styled.a`
@@ -122,8 +124,10 @@ const ProjectLink = styled.a`
   width: 120px;
   height: 100%;
   text-decoration: none;
-
-  /* border: 1px solid red; */
+  transition: 0.5s;
+  :hover {
+    font-size: 1.6rem;
+  }
 `;
 
 const Img = styled.img`
@@ -211,6 +215,7 @@ const IntroTag = styled.button`
   height: 50%;
   font-size: 1.1rem;
   font-weight: 550;
+  /* color: #eeeeee; */
   color: #9ad0ec;
   letter-spacing: 1px;
   background-color: rgba(0, 0, 0, 0);

@@ -93,7 +93,7 @@ const P = styled.p`
 const Posting: React.FunctionComponent = () => {
   return (
     <Container>
-      <Input type="radio" name="pos" id="pos1" checked />
+      <Input type="radio" name="pos" id="pos1" defaultChecked />
       <Input type="radio" name="pos" id="pos2" />
       <Ul>
         <ImgContainer>

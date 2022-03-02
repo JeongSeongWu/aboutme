@@ -102,7 +102,7 @@ const P = styled.p`
 const Manage: React.FunctionComponent = () => {
   return (
     <Container>
-      <Input type="radio" name="pos" id="pos1" checked />
+      <Input type="radio" name="pos" id="pos1" defaultChecked />
       <Input type="radio" name="pos" id="pos2" />
       <Input type="radio" name="pos" id="pos3" />
       <Input type="radio" name="pos" id="pos4" />
@@ -116,6 +116,7 @@ const Manage: React.FunctionComponent = () => {
         <ImgContainer>
           <Img src="./기록.png" />
         </ImgContainer>
+
         <Content>
           <h2>수조관리</h2>
           <h3>1. 수조등록하기</h3>
