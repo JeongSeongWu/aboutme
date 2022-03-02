@@ -31,6 +31,9 @@ const Text = styled.div`
   /* font-family: 'Bebas Neue', cursive; */
   color: white;
   width: 100%;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.35rem;
+  }
 `;
 
 const Contact = styled.div`
@@ -49,6 +52,9 @@ const Info = styled.div`
   height: 30%;
   flex-direction: column;
   margin-top: 5px;
+  @media screen and (min-width: 1450px) {
+    gap: 5px;
+  }
 `;
 
 const Cover = styled.div`
@@ -60,12 +66,18 @@ const Title = styled.div`
   width: 40%;
   color: white;
   font-size: 1.25rem;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.35rem;
+  }
 `;
 
 const Value = styled.div`
   width: 60%;
   color: white;
   font-size: 1.1rem;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const A = styled.a`
@@ -74,6 +86,9 @@ const A = styled.a`
   font-size: 1.1rem;
   text-decoration: none;
   cursor: pointer;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Desc = styled.div`
@@ -109,7 +124,8 @@ const SelfDesc = styled.div`
   font-size: 1.1rem;
   line-height: 120%;
   @media screen and (min-width: 1450px) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    height: 350px;
   }
 `;
 
@@ -159,10 +175,16 @@ const ContentContainer = styled.div`
 const Content = styled.li`
   font-size: 1.1rem;
   list-style-position: inside;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.2rem;
+  }
   p {
     font-size: 1rem;
     margin-top: 5px;
     padding-left: 20px;
+    @media screen and (min-width: 1450px) {
+      font-size: 1.1rem;
+    }
   }
 `;
 

@@ -43,6 +43,9 @@ const Circle = styled.div`
   transform-origin: 50% 48%;
   z-index: 3;
   animation: ${Drift} 11000ms infinite linear;
+  @media screen and (min-width: 1450px) {
+    top: -70%;
+  }
 `;
 
 const Circle2 = styled.div`
@@ -56,6 +59,9 @@ const Circle2 = styled.div`
   transform-origin: 50% 48%;
   z-index: 2;
   animation: ${Drift} 7000ms infinite linear;
+  @media screen and (min-width: 1450px) {
+    top: -70%;
+  }
 `;
 
 const Circle3 = styled.div`
@@ -69,6 +75,9 @@ const Circle3 = styled.div`
   transform-origin: 50% 48%;
   z-index: 1;
   animation: ${Drift} 9000ms infinite linear;
+  @media screen and (min-width: 1450px) {
+    top: -70%;
+  }
 `;
 
 const Title = styled.div`
