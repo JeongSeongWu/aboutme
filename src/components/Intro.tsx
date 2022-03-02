@@ -11,7 +11,7 @@ const Container = styled.div`
   align-items: center;
   /* border: 2px solid #e5e5e5; */
   @media screen and (min-width: 1450px) {
-    margin-top: 10%;
+    margin-top: 7%;
   }
 `;
 
@@ -53,7 +53,7 @@ const Left = styled.section`
     /* box-shadow: 3px 3px 3px white; */
   }
   @media screen and (min-width: 1450px) {
-    height: 60%;
+    height: 70%;
   }
 `;
 
