@@ -83,6 +83,9 @@ const Content = styled.div`
   width: 100%;
   height: 80%;
   /* border: 1px solid blue; */
+  @media screen and (min-width: 1450px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Stack: React.FunctionComponent = () => {

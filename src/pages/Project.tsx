@@ -44,7 +44,7 @@ const Circle = styled.div`
   z-index: 3;
   animation: ${Drift} 11000ms infinite linear;
   @media screen and (min-width: 1450px) {
-    top: -70%;
+    top: -190%;
   }
 `;
 
@@ -60,7 +60,7 @@ const Circle2 = styled.div`
   z-index: 2;
   animation: ${Drift} 7000ms infinite linear;
   @media screen and (min-width: 1450px) {
-    top: -70%;
+    top: -190%;
   }
 `;
 
@@ -76,7 +76,7 @@ const Circle3 = styled.div`
   z-index: 1;
   animation: ${Drift} 9000ms infinite linear;
   @media screen and (min-width: 1450px) {
-    top: -70%;
+    top: -190%;
   }
 `;
 

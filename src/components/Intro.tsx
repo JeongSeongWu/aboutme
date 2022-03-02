@@ -10,6 +10,9 @@ const Container = styled.div`
   /* flex-direction: column; */
   align-items: center;
   /* border: 2px solid #e5e5e5; */
+  @media screen and (min-width: 1450px) {
+    margin-top: 10%;
+  }
 `;
 
 const Left = styled.section`
@@ -48,6 +51,9 @@ const Left = styled.section`
     border-bottom: 49px solid white;
     border-left: 49px solid transparent;
     /* box-shadow: 3px 3px 3px white; */
+  }
+  @media screen and (min-width: 1450px) {
+    height: 60%;
   }
 `;
 
