@@ -108,6 +108,9 @@ const SelfDesc = styled.div`
   margin-top: 10px;
   font-size: 1.1rem;
   line-height: 120%;
+  @media screen and (min-width: 1450px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const Career = styled.div`

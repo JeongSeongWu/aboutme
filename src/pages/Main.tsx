@@ -1,12 +1,8 @@
 import styled, { keyframes } from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import About from './About';
 import Stack from './Stack';
 import Project from './Project';
-import { NOMEM } from 'dns';
 
 const Container = styled.div`
   display: flex;
@@ -49,6 +45,7 @@ const TitleContent = styled.div`
 `;
 
 const InnerContainer = styled.div`
+  max-width: 1450px;
   width: 100%;
   height: 90%;
 `;
